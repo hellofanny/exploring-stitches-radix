@@ -14,7 +14,7 @@ const button = css({
   variants: {
     size: {
       small: { fontSize: 13 },
-      medium: { fontSize: 16 },
+      medium: { fontSize: 18 },
     },
     variant: {
       primary: {
@@ -74,15 +74,30 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main>
         <button className={button()}>Button</button>
-        <br></br>
+        <br />
         <button className={button({ variant: "dark" })}>Button</button>
-        <br></br>
+        <br />
         <button className={button({ outlined: true })}>Button Outlined</button>
-        <br></br>
+        <br />
         <button className={button({ variant: "dark", outlined: true })}>
           Button Dark Outlined
+        </button>
+
+        <hr />
+
+        <button className={button({ size: "small" })}>Button size small</button>
+        <br />
+        <button
+          className={button({
+            size: {
+              "@initial": "small",
+              "@media (min-width: 500px)": "medium",
+            },
+          })}
+        >
+          Responsive Button
         </button>
       </main>
     </div>
