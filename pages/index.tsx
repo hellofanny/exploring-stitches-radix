@@ -12,6 +12,10 @@ const button = css({
   color: "white",
 
   variants: {
+    size: {
+      small: { fontSize: 13 },
+      medium: { fontSize: 16 },
+    },
     variant: {
       primary: {
         backgroundColor: "mediumpurple",
@@ -57,6 +61,7 @@ const button = css({
   ],
   defaultVariants: {
     variant: "primary",
+    size: "small",
   },
 });
 
