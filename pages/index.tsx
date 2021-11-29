@@ -26,8 +26,35 @@ const button = css({
         },
       },
     },
+    outlined: {
+      true: {
+        border: "2px solid pink",
+        backgroundColor: "transparent",
+      },
+    },
   },
 
+  compoundVariants: [
+    {
+      variant: "primary",
+      outlined: true,
+      css: {
+        color: "mediumpurple",
+        borderColor: "mediumpurple",
+        "&:hover": {
+          color: "white",
+        },
+      },
+    },
+    {
+      variant: "dark",
+      outlined: true,
+      css: {
+        color: "black",
+        borderColor: "black",
+      },
+    },
+  ],
   defaultVariants: {
     variant: "primary",
   },
@@ -46,6 +73,12 @@ const Home: NextPage = () => {
         <button className={button()}>Button</button>
         <br></br>
         <button className={button({ variant: "dark" })}>Button</button>
+        <br></br>
+        <button className={button({ outlined: true })}>Button Outlined</button>
+        <br></br>
+        <button className={button({ variant: "dark", outlined: true })}>
+          Button Dark Outlined
+        </button>
       </main>
     </div>
   );
