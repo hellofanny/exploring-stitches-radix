@@ -74,31 +74,42 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <button className={button()}>Button</button>
-        <br />
-        <button className={button({ variant: "dark" })}>Button</button>
-        <br />
-        <button className={button({ outlined: true })}>Button Outlined</button>
-        <br />
-        <button className={button({ variant: "dark", outlined: true })}>
-          Button Dark Outlined
-        </button>
+      <main className={styles.main}>
+        <h1>stitches</h1>
+        <div>
+          <section className={styles.section}>
+            <button className={button()}>Button</button>
 
-        <hr />
+            <button className={button({ variant: "dark" })}>Button</button>
 
-        <button className={button({ size: "small" })}>Button size small</button>
-        <br />
-        <button
-          className={button({
-            size: {
-              "@initial": "small",
-              "@media (min-width: 500px)": "medium",
-            },
-          })}
-        >
-          Responsive Button
-        </button>
+            <button className={button({ outlined: true })}>
+              Button Outlined
+            </button>
+
+            <button className={button({ variant: "dark", outlined: true })}>
+              Button Dark Outlined
+            </button>
+          </section>
+
+          <hr />
+
+          <section className={styles.section}>
+            <button className={button({ size: "small" })}>
+              Button size small
+            </button>
+
+            <button
+              className={button({
+                size: {
+                  "@initial": "small",
+                  "@media (min-width: 500px)": "medium",
+                },
+              })}
+            >
+              Responsive Button
+            </button>
+          </section>
+        </div>
       </main>
     </div>
   );

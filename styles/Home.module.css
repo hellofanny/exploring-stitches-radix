@@ -12,6 +12,14 @@
   align-items: center;
 }
 
+.section {
+  margin: 1.5rem 1rem;
+}
+
+.section button:not(:last-child) {
+  margin-right: 1rem;
+}
+
 .footer {
   display: flex;
   flex: 1;
