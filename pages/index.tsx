@@ -2,14 +2,41 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import { css } from "@stitches/react";
+import { css, createStitches } from "@stitches/react";
+
+//base tokens
+//theme with createStitches -> css variables <3
+const { css } = createStitches({
+  theme: {
+    colors: {
+      basePurple: "mediumpurple",
+      darkPurple: "indigo",
+      black: "black",
+      white: "white",
+      gray: "dimgray",
+    },
+    fontSizes: {
+      small: "13px",
+      medium: "18px",
+    },
+    space: {
+      1: "5px",
+      2: "10px",
+      3: "15px",
+      4: "20px",
+    },
+    radii: {
+      round: "20px",
+    },
+  },
+});
 
 const button = css({
   appearance: "none",
   border: "none",
-  padding: "10px 20px",
-  borderRadius: "20px",
-  color: "white",
+  padding: "$2 $4",
+  borderRadius: "$round",
+  color: "$white",
 
   variants: {
     size: {
@@ -18,21 +45,21 @@ const button = css({
     },
     variant: {
       primary: {
-        backgroundColor: "mediumpurple",
+        backgroundColor: "$basePurple",
         "&:hover": {
-          backgroundColor: "indigo",
+          backgroundColor: "$darkPurple",
         },
       },
       dark: {
-        backgroundColor: "black",
+        backgroundColor: "$black",
         "&:hover": {
-          backgroundColor: "dimgray",
+          backgroundColor: "$gray",
         },
       },
     },
     outlined: {
       true: {
-        border: "2px solid pink",
+        border: "2px solid",
         backgroundColor: "transparent",
       },
     },
@@ -43,10 +70,10 @@ const button = css({
       variant: "primary",
       outlined: true,
       css: {
-        color: "mediumpurple",
-        borderColor: "mediumpurple",
+        color: "$basePurple",
+        borderColor: "$basePurple",
         "&:hover": {
-          color: "white",
+          color: "$white",
         },
       },
     },
@@ -54,14 +81,14 @@ const button = css({
       variant: "dark",
       outlined: true,
       css: {
-        color: "black",
-        borderColor: "black",
+        color: "$black",
+        borderColor: "$black",
       },
     },
   ],
   defaultVariants: {
     variant: "primary",
-    size: "small",
+    size: "$small",
   },
 });
 
@@ -94,15 +121,15 @@ const Home: NextPage = () => {
           <hr />
 
           <section className={styles.section}>
-            <button className={button({ size: "small" })}>
+            <button className={button({ size: "$small" })}>
               Button size small
             </button>
 
             <button
               className={button({
                 size: {
-                  "@initial": "small",
-                  "@media (min-width: 500px)": "medium",
+                  "@initial": "$small",
+                  "@media (min-width: 500px)": "$medium",
                 },
               })}
             >
