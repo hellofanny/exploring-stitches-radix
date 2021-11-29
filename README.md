@@ -1,6 +1,6 @@
 # Exploring Stitches
 
->
+> Finding out about [Stitches](https://stitches.dev) by [Modulz](https://modulz.app) – a CSS-in-JS library with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
 
 ---
 
