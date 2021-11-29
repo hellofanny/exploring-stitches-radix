@@ -22,11 +22,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🛣 Roadmap
 
-- [ ]
+- [ ] [Explore Palette Composition - Radix UI](https://www.radix-ui.com/docs/colors/palette-composition/understanding-the-scale)
 
 ## 🤓 Useful Links / References
 
 - [Stitches](https://stitches.dev) - CSS-in-JS with near-zero runtime.
 - [Design Systems e componentes acessíveis com Stitches e Radix (feat. Pedro Duarte)](https://www.youtube.com/watch?v=c_hrvOaZRNo) - Tutorial video
 - [Variant-driven Components](https://ped.ro/blog/variant-driven-components) - To read!
-- https://system-ui.com/
+- [System UI](https://system-ui.com/)
