@@ -1,6 +1,9 @@
-# Exploring Stitches
+# Exploring Stitches & Radix UI
 
-> Finding out about [Stitches](https://stitches.dev) by [Modulz](https://modulz.app) – a CSS-in-JS library with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
+> Finding out about [Stitches](https://stitches.dev) and [Radix UI](https://www.radix-ui.com) by [Modulz](https://modulz.app)
+ 
+- Stitches – a CSS-in-JS library with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
+- Radix UI – Unstyled, accessible components for building high‑quality design systems and web apps in React.
 
 ---
 
