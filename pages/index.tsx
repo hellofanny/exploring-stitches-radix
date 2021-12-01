@@ -30,12 +30,23 @@ const { css } = createStitches({
       round: "20px",
     },
   },
+  utils: {
+    paddingX: (value: number) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    paddingY: (value: number) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+  },
 });
 
 const button = css({
   appearance: "none",
   border: "none",
-  padding: "$2 $4",
+  paddingX: "$4",
+  paddingY: "$2",
   borderRadius: "$round",
   color: "$white",
 
