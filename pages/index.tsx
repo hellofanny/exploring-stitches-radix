@@ -3,14 +3,15 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 import { css, createStitches } from "@stitches/react";
+import { purple, slate } from "@radix-ui/colors";
 
 //base tokens
 //theme with createStitches -> css variables <3
 const { css } = createStitches({
   theme: {
     colors: {
-      basePurple: "mediumpurple",
-      darkPurple: "indigo",
+      ...purple,
+      ...slate,
       black: "black",
       white: "white",
       gray: "dimgray",
@@ -45,15 +46,17 @@ const button = css({
     },
     variant: {
       primary: {
-        backgroundColor: "$basePurple",
+        backgroundColor: "$purple3",
+        color: "$purple11",
         "&:hover": {
-          backgroundColor: "$darkPurple",
+          backgroundColor: "$purple4",
         },
       },
       dark: {
-        backgroundColor: "$black",
+        backgroundColor: "$slate3",
+        color: "$slate12",
         "&:hover": {
-          backgroundColor: "$gray",
+          backgroundColor: "$slate4",
         },
       },
     },
@@ -70,19 +73,14 @@ const button = css({
       variant: "primary",
       outlined: true,
       css: {
-        color: "$basePurple",
-        borderColor: "$basePurple",
-        "&:hover": {
-          color: "$white",
-        },
+        borderColor: "$purple7",
       },
     },
     {
       variant: "dark",
       outlined: true,
       css: {
-        color: "$black",
-        borderColor: "$black",
+        borderColor: "$slate7",
       },
     },
   ],
