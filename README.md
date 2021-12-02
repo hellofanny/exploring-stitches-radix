@@ -1,4 +1,4 @@
-# Exploring Stitches & Radix UI
+# Exploring Stitches & Radix UI 💛
 
 > Finding out about [Stitches](https://stitches.dev) and [Radix UI](https://www.radix-ui.com) by [Modulz](https://modulz.app)
  
